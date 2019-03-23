@@ -1,12 +1,13 @@
 def oxford_comma(array)
   size=array.size
-  case size
-  when 1
+if size==1
     return array[0]
-  when 2
-    return array.join("and")
-  when 3
-    return "#{array[0]},#{array[1]} and #{array[2]}
+  elsif size==2
+    return array.join(" and ")
+  elsif size==3
+    return "#{array[0]}, #{array[1]}, and #{array[2]}"
+  else
+    array[-1]="and #{array[-1]}"
+    array.join(", ")
   end
-
 end
