@@ -7,7 +7,7 @@ if size==1
   elsif size==3
     return "#{array[0]}, #{array[1]}, and #{array[2]}"
   else
-    array[-1]="and #{array[-1]}"
+    array[-1]="and #{array[-1]}"#change the value of last item to "and"+item and then join it
     array.join(", ")
   end
 end
