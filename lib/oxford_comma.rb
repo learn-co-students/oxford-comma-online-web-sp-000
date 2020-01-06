@@ -1,8 +1,11 @@
 def oxford_comma(array)
-  new_array = []
-  array.each do |arr|
-    if != array[-1]
-      new_array << arr.join(",")
-    else
-      arr.push(", and" + arr)
+    if array.length == 0
+      return nil
+    elsif array.length == 1
+      return "#{array[0]}"
+    elsif array.length == 2
+      array.join(" and ")
+    else array.length > 2
+      array[0...-1].join(", ") << ", and #{array[-1]}"
+    end
 end
