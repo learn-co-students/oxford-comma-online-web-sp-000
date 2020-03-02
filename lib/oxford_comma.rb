@@ -5,9 +5,7 @@ def oxford_comma(array)
     when array.size == 2
       return array.join(" and ")
     else array.size >= 3
-    end
+      array.insert(-2," and ")
+      return array.join(", ")
+  end
 end
-
-
-## CONVERT ARRAY TO STRING
-##  new_string << array[-2]
