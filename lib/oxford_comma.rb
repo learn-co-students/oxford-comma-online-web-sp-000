@@ -7,11 +7,5 @@ def oxford_comma(array)
     array.join(" and ")
   else
     array[0..-2].join(", ") + "," + " and " + array[-1]
-    # add the new element ("and") in the second to last position
-    #array.insert(-2, "and")
-    # convert array to string
-    #array.join(", ")
-    # remove last comma
-    # hmmmm...
   end
 end
