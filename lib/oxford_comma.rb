@@ -1,15 +1,15 @@
 def oxford_comma(array)
-  case array.count
   
-  when 1 
-    return array.join
-    
-  when 2 
+  if array.count == 2
     return array.join(" and ")
+  
+  elsif array.count > 2 
+    array[-1].insert(0, "and ")
     
-  else
-    return array.slice(0, array.count - 1).join(", ") + ", and " + array[-1]
   end
+  
+  return array.join(", ")
+  
 end
 
 
