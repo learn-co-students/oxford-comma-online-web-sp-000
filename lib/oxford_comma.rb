@@ -1,3 +1,10 @@
-def oxford_comma(array)
 
-end
+def oxford_comma(list)
+  return list.join(' and ') if list.size < 3 
+  list[-1] = "and " + list[-1]
+  list.join(', ')
+end 
+
+
+
+puts oxford_comma(["kiwi","apple","orange"])
