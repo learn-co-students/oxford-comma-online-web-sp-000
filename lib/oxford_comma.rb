@@ -1,8 +1,8 @@
-def oxford_comma(sentence)
-  if sentence.length == 2
-    return "#{sentence[0]} and #{sentence[1]}"
-  elsif sentence.length > 2
-    sentence[-1] = "and #{sentence[-1]}"
+def oxford_comma(array)
+  if array.length == 2
+    return "#{array[0]} and #{array[1]}"
+  elsif array.length > 2
+    array[-1] = "and #{array[-1]}"
   end
-  sentence.join(", ")
+  array.join(", ")
 end
