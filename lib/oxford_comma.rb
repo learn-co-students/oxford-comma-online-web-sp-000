@@ -3,12 +3,10 @@ def oxford_comma(array)
     array.join
   elsif array.length == 2
     array.join(" and ")
-  else
-    string = ""
-    end_of_string = "and " + array.pop
-    array.each do |element|
-        string << element + ", "
-    end
-    string + end_of_string
+  elsif 2 < array.length
+    last_e = array.pop
+    array << "and "
+    string = array.join(", ")
+    string + last_e
   end
 end
